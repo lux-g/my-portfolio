@@ -1,3 +1,8 @@
+//FONTS
+@font-face {
+    font-family: 'oggRoman';
+    src: url('../fonts/Ogg\ Roman.ttf'),
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,3 +12,22 @@ html, body {
     height: 100%;
     width: 100%;
 }
+body {
+    background-color: #141414;
+    overflow-x: hidden;
+}
+
+
+//COLORS
+$main-text-color: #F8F8F8;
+$text-gray-color: #484848;
+
+//IMPORTS
+@import './_loader';
+@import './_nav';
+@import './_hero';
+@import './_skills';
+@import './_projects';
+@import './_designs';
+@import './_contact';
+@import './_footer';

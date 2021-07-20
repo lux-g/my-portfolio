@@ -1,0 +1,35 @@
+.skills-wrapper {
+    margin-bottom: 15%;
+    .title-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .title {
+        font-family: 'oggRoman';
+        font-weight: 500;
+        font-size: calc(18px + 80*(100vw - 320px)/1600);
+        color: #484848;
+        font-style: italic;
+        line-height: 1.3;
+        @media (max-width: 600px) {
+            font-size: calc(26px + 80*(100vw - 320px)/1600);
+        }
+        .text {
+            overflow: hidden;
+            .skills-reveal {
+                display: inline-block;
+                //transform: translateY(100%);
+            }
+        }
+        span {
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 400ms ease-in-out;
+            &::after {
+                content: attr(data-text);
+            }
+        }
+    } 
+}

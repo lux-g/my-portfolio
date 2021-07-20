@@ -1,0 +1,40 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 12;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-family: "oggRoman";
+        font-size: 4vw;
+        font-weight: 500;
+        color: white;
+        letter-spacing: -4px;
+        opacity: 0;
+        overflow: hidden;
+        @media (max-width: 700px) {
+            font-size: 7vw;
+        }
+        span {
+            display: inline-block;
+            transform: translateY(0%);
+        }
+    }
+
+}
+.loader.hidden {
+    animation: fadeOut 1.4s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+    100% {
+        transform: translateY(-100%);
+        transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+    }
+}
