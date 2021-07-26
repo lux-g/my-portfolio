@@ -11,10 +11,10 @@
     justify-content: center;
     align-items: center;
     h1 {
-        font-family: "oggRoman";
+        font-family: 'HelveticaNeueCyr-Medium';
         font-size: 4vw;
         font-weight: 500;
-        color: white;
+        color: $main-text-color;
         letter-spacing: -4px;
         opacity: 0;
         overflow: hidden;

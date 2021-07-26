@@ -3,6 +3,14 @@
     font-family: 'oggRoman';
     src: url('../fonts/Ogg\ Roman.ttf'),
 }
+@font-face {
+    font-family: 'HelveticaNeueCyr-Light';
+    src: url('../fonts/HelveticaNeueCyr-Light.otf')
+}
+@font-face {
+    font-family: 'HelveticaNeueCyr-Medium';
+    src: url('../fonts/HelveticaNeueCyr-Medium.otf')
+}
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +29,7 @@ body {
 //COLORS
 $main-text-color: #F8F8F8;
 $text-gray-color: #484848;
+$text-lightgray-color: #686868;
 
 //IMPORTS
 @import './_loader';
@@ -29,5 +38,6 @@ $text-gray-color: #484848;
 @import './_skills';
 @import './_projects';
 @import './_designs';
+@import './_modal';
 @import './_contact';
 @import './_footer';

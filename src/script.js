@@ -75,9 +75,10 @@ navLinks.forEach(link => {
 const handleExternalLink = (url) => {
     return function(e) {
         e.preventDefault();
-        console.log(e.target)
+        //console.log(e.target)
         tl.reversed(!tl.reversed())
-        ham.classList.toggle("change")
+        ham.classList.toggle("change");
+        document.querySelector("body").classList.remove("no-scroll");
         setTimeout(()=> {
             window.location.href = url;
         }, 1800)
@@ -89,15 +90,6 @@ document.querySelector(".github-link").addEventListener('click', handleExternalL
 document.querySelector(".twitter-link").addEventListener('click', handleExternalLink("https://twitter.com/DevCoder2"));
 document.querySelector(".instagram-link").addEventListener('click', handleExternalLink("https://www.instagram.com/devcoder2/"))
 document.querySelector('.blog-link').addEventListener('click', handleExternalLink("https://www.marcs-blog.com/"));
-
-
-//SKILLS ANIMATIONS
-// let skillsTL = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: ".skills-wrapper"
-//     }
-// });
-// skillsTL.to(".skills-reveal", {duration: 1.2, y:"0%", stagger: 0.2, ease: "power4.easeOut"})
 
 
 //PROJECT IMAGES
@@ -115,10 +107,10 @@ projectFour.src = projectFourImg
 
 //PARALLAX IMAGES
 var imagesParallax = document.querySelectorAll(".parallax");
-imagesParallax.forEach(img => {
-    new simpleParallax(img, {
+imagesParallax.forEach(text => {
+    new simpleParallax(text, {
         overflow: true,
-        delay: 1.5
+        delay: 2
     }); 
 })
 
@@ -212,16 +204,44 @@ gsap.from(coolStuffImages, { duration: 1.2, delay: 0.8, opacity: 0, stagger: 0.2
 }})
 
 
+//MODAL IMAGES
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content');
+const designImages = document.querySelectorAll('.designImage');
+
+designImages.forEach((img, index) => {
+    img.addEventListener('click', ()=> {
+        modal.classList.add('open-modal')
+        switch(index){
+            case 0:
+                modalContent.src = designsFourImg;
+                break;
+            case 1:
+                modalContent.src = designsFiveImg;
+                break;
+            case 2:
+                modalContent.src = designsSixImg;
+                break;
+        }
+    });
+});
+
+//CLOSE MODAL
+document.querySelector('.close').addEventListener('click', ()=> {
+    modal.classList.remove('open-modal')
+});
+
+
 //CONTACT ANIMATIONS
 gsap.to(".contact-reveal", { duration: 0.8, y:"0%", scrollTrigger: {
-    trigger: ".contact-reveal",
+    trigger: ".contact-container",
 }})
 let contactTL = gsap.timeline({
     scrollTrigger: {
         trigger: ".contact-container",
     }
 });
-contactTL.to(".contact-link span", {  duration: 0.6, y:"0%", opacity: 1, stagger: 0.2});
+contactTL.to(".contact-container span", {  duration: 0.8, y:"0%", opacity: 1, stagger: 0.2});
 
 
 //PDF

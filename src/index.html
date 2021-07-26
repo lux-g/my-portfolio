@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Front End Web Developer">
     <title>Marc Trojanowski | Front End Web Developer</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/cf6ef74e1b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -74,7 +75,7 @@
         </nav>
 
         <div class="top__email">
-            <a href="mailto:marc.trojanowski@gmail.com"><span class="email-reveal">marc.trojanowski@outlook.com</span></a>
+            <a href="mailto:marc.trojanowski@outlook.com"><span class="email-reveal">marc.trojanowski@outlook.com</span></a>
         </div>  
         <!--NAV END-->      
 
@@ -82,9 +83,9 @@
         <div class="hero">
             <div class="hero-container">
                 <div class="hero-container__text">
-                    <p class="hero-container__about-one paragraph">Hi! My name is Marc Trojanowski. I am a Web Developer based out of Bristol Connecticut. My focus is on the front end which includes design, animations, and most importantly functionality and performance. I am self taught and started my journey at the end of 2019 in which I started off learning HTML, CSS, JavaScript, and then React.</p>
+                    <p class="hero-container__about-one paragraph parallax">Hi! My name is Marc Trojanowski. I am a Web Developer based out of Bristol Connecticut. My focus is on the front end which includes design, animations, and most importantly functionality and performance. I am self taught and started my journey at the end of 2019 in which I started off learning HTML, CSS, JavaScript, and then React.</p>
                     <br>
-                    <p class="hero-container__about-two paragraph">I also have a passion for design and 3D/Motion graphics using THREE JS, Adobe After Effects, GSAP, Figma, and Photoshop. I have a great understanding and have experience using all the technologies listed below.</p>
+                    <p class="hero-container__about-two paragraph parallax">I also have a passion for design and 3D/Motion graphics using THREE JS, Adobe After Effects, GSAP, Figma, and Photoshop. I have a great understanding and have experience using all the technologies listed below.</p>
                 </div>
             </div>
         </div>
@@ -129,7 +130,7 @@
                 <div class="section-one__img-wrap">
                     <h1><span class="project-title-text">MOVIE SEARCH</span></h1>
                     <div class="image-container">
-                        <img class="section-one-img parallax" alt="">
+                        <img class="section-one-img" loading="lazy" alt="">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -146,7 +147,7 @@
                 <div class="section-two__img-wrap" >
                     <h1><span class="project-title-text">E-COMMERCE</span></h1>
                     <div class="image-container">
-                        <img class="section-two-img parallax" alt="">
+                        <img class="section-two-img" loading="lazy" alt="">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -163,7 +164,7 @@
                 <div class="section-four__img-wrap">
                     <h1><span class="project-title-text">SPOTIFY CLONE</span></h1>
                     <div class="image-container">
-                        <img class="section-four-img parallax" alt="">
+                        <img class="section-four-img" loading="lazy" alt="">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -184,37 +185,44 @@
             <div class="designs-container">
                 <div class="block">
                     <a href="https://woodward-portfolio.netlify.app/" target="_blank" rel="noopener">
-                        <img class="designs-img1" alt="">
+                        <img class="designs-img1" loading="lazy" alt="">
                         <p>Made with THREE JS</p>
                     </a>
                 </div>
                 <div class="block">
                     <a href="https://jolly-feynman-4cca6f.netlify.app/" target="_blank" rel="noopener">
-                        <img class="designs-img2" alt="">
+                        <img class="designs-img2" loading="lazy" alt="">
                         <p>Made with THREE JS</p>
                     </a>
                 </div>
                 <div class="block">
                     <a href="https://biggie-threejs.netlify.app/" target="_blank" rel="noopener">
-                        <img class="designs-img3" alt="">
+                        <img class="designs-img3" loading="lazy" alt="">
                         <p>Made with THREE JS</p>
                     </a>
                 </div>
                 <div class="block">
-                    <img class="designs-img4" alt="">
+                    <img class="designs-img4 designImage" loading="lazy" alt="">
                     <p>Design made with Figma</p>
                 </div>
                 <div class="block">
-                    <img class="designs-img5" alt="">
+                    <img class="designs-img5 designImage" loading="lazy" alt="">
                     <p>Flyer design made with Photoshop</p>
                 </div>
                 <div class="block">
-                    <img class="designs-img6" alt="">
+                    <img class="designs-img6 designImage" loading="lazy" alt="">
                     <p>Logo design made with Photoshop</p>
                 </div>
             </div>
         </div>
         <!--DESIGNS END-->
+
+        <!--MODAL FOR IMAGES-->
+        <div class="modal">
+            <span class="close">&times</span>
+            <img class="modal-content" alt="">
+        </div>
+        <!--ENDMODAL FOR IMAGES-->
 
         <!--CONTACT START-->
         <div class="contact-title" id="section3">
